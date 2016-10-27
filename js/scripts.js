@@ -6,9 +6,11 @@ function coded(input) {
   var squareRoot = Math.sqrt(length);
 
   if (squareRoot % 1 != 0) {
-    console.log("decimals")
+    var column = (Math.floor(squareRoot) + 1)
+    console.log(column);
   } else {
-    console.log("evenly divided")
+    var column = squareRoot;
+    console.log(column);
   }
 }
 
