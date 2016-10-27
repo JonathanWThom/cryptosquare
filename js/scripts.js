@@ -6,6 +6,7 @@ function coded(input) {
   var squareRoot = Math.sqrt(length);
   console.log(length);
 
+  var outputArray = [];
 
   if (squareRoot % 1 != 0) {
     var column = (Math.floor(squareRoot) + 1)
@@ -19,10 +20,21 @@ function coded(input) {
   for (index = 0; index < column; index++) {
     for (i = x; i < length; i += column) {
       var encrypted = noSpaces.charAt(i);
-      console.log(encrypted);
+      outputArray.push(encrypted);
       }
     x++;
     }
+    console.log(outputArray);
+    var finalOutput = outputArray.join("");
+    var superFinalOutput = finalOutput.match(/.{1,5}/g);
+    console.log(superFinalOutput);
+    var output = superFinalOutput.join(" ");
+    console.log(output);
+
+
+    //replace(/(.{5})/g,"$1$");
+    console.log(superFinalOutput);
+    return output;
 }
 // user interface
 $(document).ready(function(){
@@ -31,7 +43,7 @@ $(document).ready(function(){
     var input = $("#userString").val();
     var finalOutput = coded(input);
 
-    $(".output").text(finalOuput);
+    $(".output").text(finalOutput);
 
   });
 });
