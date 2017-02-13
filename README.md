@@ -1,3 +1,8 @@
+## Cryptosquare
+
+Cryptosqure decoder using JS. Practice with BDD. 
+
+## Specifications
 1. Remove all spaces from input
 - input: hello world
 - output: helloworld
